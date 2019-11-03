@@ -27,7 +27,7 @@ class ImageProcessor(object):
         return None, frame
 
     def is_square(self, coords):
-        """Checks for a primitive found earlier looks like a square."""
+        """Checks whether a primitive found earlier looks like a square."""
         if abs(np.linalg.norm(coords[0]-coords[1]) -
                np.linalg.norm(coords[0] - coords[3])) < self.SQUARE_SIMILARITY_ERROR:
             return True
